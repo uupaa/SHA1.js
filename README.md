@@ -1,7 +1,7 @@
 SHA1.js
 =========
 
-SHA1.js は、SHA1 ハッシュを計算する機能を提供します。
+SHA1.js is calc SHA1 hash.
 
 # Install, Setup modules
 
