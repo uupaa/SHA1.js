@@ -3,6 +3,10 @@ SHA1.js
 
 SHA1.js is calc SHA1 hash.
 
+# API Document
+
+https://github.com/uupaa/SHA1.js/wiki/SHA1
+
 # Install, Setup modules
 
 ```sh
@@ -28,9 +32,5 @@ $ npm test
     test success.
     ok.
 ```
-
-# API Document
-
-https://github.com/uupaa/SHA1.js/wiki/SHA1
 
 
