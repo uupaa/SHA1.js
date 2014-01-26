@@ -1,7 +1,12 @@
 new Test().add([
         testSHA1String,
         testSHA1Binary,
-    ]).run();
+    ]).run().worker(function(err, test) {
+        if (!err) {
+            SHA1 = SHA1_;
+            new Test(test).run().worker();
+        }
+    });
 
 function testSHA1String(next) {
 
