@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.sha1.js",
-  "version":        "0.8.7",
+  "version":        "0.8.8",
   "description":    "SHA1 implement.",
   "url":            "https://github.com/uupaa/SHA1.js",
   "keywords":       ["SHA1", "Hash", "util", "uupaa"],
@@ -16,7 +16,6 @@
     "uupaa.bytearray.js": ""
   },
   "devDependencies": {
-    "uupaa.mappedarray.js": "",
     "uupaa.help.js":    "",
     "uupaa.task.js":    "",
     "uupaa.test.js":    "",

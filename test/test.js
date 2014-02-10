@@ -3,8 +3,11 @@ new Test().add([
         testSHA1Binary,
     ]).run().worker(function(err, test) {
         if (!err) {
-            SHA1 = SHA1_;
-            new Test(test).run().worker();
+            var undo = Test.swap(SHA1, SHA1_);
+
+            new Test(test).run(function(err, test) {
+                undo = Test.undo(undo);
+            });
         }
     });
 
