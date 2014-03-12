@@ -1,36 +1,64 @@
 SHA1.js
 =========
 
-SHA1.js is calc SHA1 hash.
+calc SHA1 hash.
 
-# API Document
+# Document
 
 https://github.com/uupaa/SHA1.js/wiki/SHA1
 
-# Install, Setup modules
+# How to use
 
-```sh
-$ brew install closure-compiler
+```js
+<script src="lib/SHA1.js">
+<script>
+// for Browser
 
-$ git clone git@github.com:uupaa/SHA1.js.git
-$ cd SHA1.js
-$ npm install
+console.log( SHA1("aaa") ); // "7e240de74fb1ed08fa08d38063f6a6a91462a815";
+</script>
 ```
 
-# Minify
+```js
+// for WebWorkers
+importScripts("lib/SHA1.js");
 
-```sh
-$ npm start
-
-  or
-
-$ node node_modules/uupaa.minify.js --keep --output ./lib/SHA1.min.js ./lib/SHA1.js
+console.log( SHA1("aaa") ); // "7e240de74fb1ed08fa08d38063f6a6a91462a815";
 ```
 
-# Test
+```js
+// for Node.js
+var SHA1 = require("lib/SHA1.js");
 
-```sh
-$ npm test
+console.log( SHA1("aaa") ); // "7e240de74fb1ed08fa08d38063f6a6a91462a815";
 ```
 
+# for Developers
+
+1. Install development dependency tools
+
+    ```sh
+    $ brew install closure-compiler
+    $ brew install node
+    $ npm install -g plato
+    ```
+
+2. Clone Repository and Install
+
+    ```sh
+    $ git clone git@github.com:uupaa/SHA1.js.git
+    $ cd SHA1.js
+    $ npm install
+    ```
+
+3. Build and Minify
+
+    `$ npm run build`
+
+4. Test
+
+    `$ npm run test`
+
+5. Lint
+
+    `$ npm run lint`
 
