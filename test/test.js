@@ -1,12 +1,16 @@
 new Test().add([
         testSHA1String,
         testSHA1Binary,
-    ]).run().worker(function(err, test) {
-        if (!err && typeof SHA1_ !== "undefined") {
-            var name = Test.swap(SHA1, SHA1_);
+    ]).run(function(err, test) {
+        if (1) {
+            err || test.worker(function(err, test) {
+                if (!err && typeof SHA1_ !== "undefined") {
+                    var name = Test.swap(SHA1, SHA1_);
 
-            new Test(test).run(function(err, test) {
-                Test.undo(name);
+                    new Test(test).run(function(err, test) {
+                        Test.undo(name);
+                    });
+                }
             });
         }
     });
