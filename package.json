@@ -1,9 +1,9 @@
 {
   "name":           "uupaa.sha1.js",
-  "version":        "0.8.9",
+  "version":        "0.8.10",
   "description":    "SHA1 implement.",
   "url":            "https://github.com/uupaa/SHA1.js",
-  "keywords":       ["SHA1", "Hash", "util", "uupaa"],
+  "keywords":       ["SHA1", "Hash", "util", "uupaa", "WebModule"],
   "repository": {
     "type":         "git",
     "url":          "https://github.com/uupaa/SHA1.js.git"
@@ -18,12 +18,13 @@
   },
   "x-build": {
     "inputs":       ["lib/SHA1.js"],
-    "output":       "lib/SHA1.min.js"
+    "output":       "release/SHA1.min.js"
   },
   "dependencies": {
     "uupaa.bytearray.js": ""
   },
   "devDependencies": {
+    "uupaa.console.js": "",
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
     "uupaa.task.js":    "",

@@ -12,52 +12,52 @@ __report = {
       },
       "complexity": {
         "aggregate": {
-          "line": 4,
+          "line": 5,
           "complexity": {
             "sloc": {
               "physical": 152,
-              "logical": 93
+              "logical": 92
             },
             "cyclomatic": 18,
             "halstead": {
               "operators": {
                 "distinct": 33,
-                "total": 267,
+                "total": 265,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "operands": {
-                "distinct": 91,
-                "total": 356,
+                "distinct": 90,
+                "total": 353,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
-              "length": 623,
-              "vocabulary": 124,
-              "difficulty": 64.54945054945054,
-              "volume": 4332.464301371024,
-              "effort": 279658.1901786087,
-              "bugs": 1.4441547671236745,
-              "time": 15536.566121033817
+              "length": 618,
+              "vocabulary": 123,
+              "difficulty": 64.71666666666667,
+              "volume": 4290.47396429965,
+              "effort": 277665.1733895924,
+              "bugs": 1.4301579880998834,
+              "time": 15425.842966088465
             },
             "params": 6
           }
         },
         "module": "lib/SHA1.js",
-        "maintainability": 52.465789085446346
+        "maintainability": 52.57645654339382
       }
     }
   ],
   "summary": {
     "total": {
       "sloc": 152,
-      "maintainability": 52.465789085446346
+      "maintainability": 52.57645654339382
     },
     "average": {
       "sloc": 152,
-      "maintainability": "52.47"
+      "maintainability": "52.58"
     }
   }
 }
