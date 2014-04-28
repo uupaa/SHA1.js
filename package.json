@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.sha1.js",
-  "version":        "0.8.12",
+  "version":        "0.8.13",
   "description":    "SHA1 implement.",
   "url":            "https://github.com/uupaa/SHA1.js",
   "keywords":       ["SHA1", "Hash", "util", "uupaa", "WebModule"],
@@ -14,18 +14,26 @@
     "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
     "build-release":"node node_modules/uupaa.minify.js --verbose --strict --module",
     "test":         "npm run test-node; npm run test-browser",
+    "test-page":    "node node_modules/uupaa.test.js/bin/TestPage.js --verbose",
+    "test-debug":   "NODE_ENV=production NODE_PATH=lib node --debug-brk --harmony test/index.node.js",
     "test-node":    "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js",
     "test-browser": "open test/index.html",
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
-    "inputs":       ["lib/SHA1.js"],
-    "output":       "release/SHA1.min.js"
+    "files":        ["lib/SHA1.js"],
+    "output":       "release/SHA1.min.js",
+    "target":       ["all"],
+    "module": {
+      "develop":    ["uupaa.valid.js"],
+      "release":    ["uupaa.bytearray.js"]
+    }
   },
   "dependencies": {
     "uupaa.bytearray.js": ""
   },
   "devDependencies": {
+    "uupaa.nodemodule.js": "",
     "uupaa.console.js": "",
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
