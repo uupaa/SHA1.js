@@ -1,19 +1,18 @@
-new Test().add([
+var ModuleTest = (function(global) {
+
+return new Test({
+        disable:    false,
+        node:       false,
+        browser:    true,
+        worker:     false,
+        button:     false,
+        both:       false,
+        primary:    global["SHA1"],
+        secondary:  global["SHA1_"],
+    }).add([
         testSHA1String,
         testSHA1Binary,
-    ]).run(function(err, test) {
-        if (1) {
-            err || test.worker(function(err, test) {
-                if (!err && typeof SHA1_ !== "undefined") {
-                    var name = Test.swap(SHA1, SHA1_);
-
-                    new Test(test).run(function(err, test) {
-                        Test.undo(name);
-                    });
-                }
-            });
-        }
-    });
+    ]).run().clone();
 
 function testSHA1String(next) {
 
@@ -50,4 +49,6 @@ function testSHA1Binary(next) {
         next && next.miss();
     }
 }
+
+})((this || 0).self || global);
 
