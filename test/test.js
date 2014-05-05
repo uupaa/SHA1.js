@@ -2,11 +2,11 @@ var ModuleTest = (function(global) {
 
 return new Test({
         disable:    false,
-        node:       false,
+        node:       true,
         browser:    true,
-        worker:     false,
-        button:     false,
-        both:       false,
+        worker:     true,
+        button:     true,
+        both:       true,
         primary:    global["SHA1"],
         secondary:  global["SHA1_"],
     }).add([
