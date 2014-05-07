@@ -1,14 +1,12 @@
-var ModuleTest = (function(global) {
+var ModuleTestSHA1 = (function(global) {
 
-return new Test({
+return new Test("SHA1", {
         disable:    false,
-        node:       true,
         browser:    true,
         worker:     true,
+        node:       true,
         button:     true,
         both:       true,
-        primary:    global["SHA1"],
-        secondary:  global["SHA1_"],
     }).add([
         testSHA1String,
         testSHA1Binary,
@@ -21,10 +19,8 @@ function testSHA1String(next) {
     var sha1HashString = SHA1(source);
 
     if (answer === sha1HashString) {
-        console.log("testSHA1String ok");
         next && next.pass();
     } else {
-        console.log("testSHA1String ng");
         next && next.miss();
     }
 }
@@ -42,10 +38,8 @@ function testSHA1Binary(next) {
         });
 
     if (match) {
-        console.log("testSHA1Binary ok");
         next && next.pass();
     } else {
-        console.log("testSHA1Binary ng");
         next && next.miss();
     }
 }

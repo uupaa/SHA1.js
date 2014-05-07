@@ -8,9 +8,9 @@ Calc SHA1 hash.
 
 # Document
 
-- [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
-- [Development](https://github.com/uupaa/WebModule/wiki/Development)
 - [SHA1.js wiki](https://github.com/uupaa/SHA1.js/wiki/SHA1)
+- [Development](https://github.com/uupaa/WebModule/wiki/Development)
+- [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
 
 
 # How to use
