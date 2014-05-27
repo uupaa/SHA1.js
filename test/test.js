@@ -29,7 +29,7 @@ function testSHA1Binary(next) {
 
     var source = "aaa";
     var answer = "7e240de74fb1ed08fa08d38063f6a6a91462a815";
-    var sha1HashArray = SHA1.encode(ByteArray.fromString(source));
+    var sha1HashArray = SHA1.encode(DataType["Array"].fromString(source));
 
     var match = sha1HashArray.every(function(value, index) {
             var hex = parseInt(answer.slice(index * 2, index * 2 + 2), 16);
