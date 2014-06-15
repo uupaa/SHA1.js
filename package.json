@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.sha1.js",
-  "version":        "0.8.17",
+  "version":        "0.8.18",
   "description":    "SHA1 implement.",
   "url":            "https://github.com/uupaa/SHA1.js",
   "keywords":       ["SHA1", "Hash", "util", "uupaa", "WebModule"],
@@ -21,7 +21,7 @@
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
-    "files":        ["lib/SHA1.js"],
+    "source":       ["lib/SHA1.js"],
     "output":       "release/SHA1.min.js",
     "target":       ["all"],
     "labels":       ["@dev"],
