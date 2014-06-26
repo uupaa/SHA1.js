@@ -12,35 +12,36 @@ return new Test("SHA1", {
         testSHA1Binary,
     ]).run().clone();
 
-function testSHA1String(next) {
+function testSHA1String(test, pass, miss) {
 
     var source = "aaa";
     var answer = "7e240de74fb1ed08fa08d38063f6a6a91462a815";
     var sha1HashString = SHA1(source);
 
     if (answer === sha1HashString) {
-        next && next.pass();
+        test.done(pass());
     } else {
-        next && next.miss();
+        test.done(miss());
     }
 }
 
-function testSHA1Binary(next) {
+function testSHA1Binary(test, pass, miss) {
 
     var source = "aaa";
     var answer = "7e240de74fb1ed08fa08d38063f6a6a91462a815";
-    var sha1HashArray = SHA1.encode(DataType["Array"].fromString(source));
+    var sha1HashArray = SHA1.encode(DataType["Uint8Array"].fromString(source));
+    var array = Array.prototype.slice.call(sha1HashArray);
 
-    var match = sha1HashArray.every(function(value, index) {
+    var match = array.every(function(value, index) {
             var hex = parseInt(answer.slice(index * 2, index * 2 + 2), 16);
 
             return value === hex;
         });
 
     if (match) {
-        next && next.pass();
+        test.done(pass());
     } else {
-        next && next.miss();
+        test.done(miss());
     }
 }
 
