@@ -1,9 +1,9 @@
 {
   "name":           "uupaa.sha1.js",
-  "version":        "0.9.0",
+  "version":        "0.9.1",
   "description":    "SHA1 implement.",
   "url":            "https://github.com/uupaa/SHA1.js",
-  "keywords":       ["SHA1", "Hash", "util", "uupaa", "WebModule"],
+  "keywords":       ["SHA1", "Hash", "util", "uupaa", "WebModule", "Unstable"],
   "repository": {
     "type":         "git",
     "url":          "https://github.com/uupaa/SHA1.js.git"
@@ -22,13 +22,14 @@
     "server":       "http-server -c-1 -p 8585 &",
     "server-stop":  "",
     "server-kill":  "killall -- node /usr/local/bin/http-server -p 8585 ; exit 0",
+    "hint":         "jshint lib/*.js",
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
     "source":       ["lib/SHA1.js"],
     "output":       "release/SHA1.min.js",
     "target":       ["all"],
-    "labels":       ["@dev"],
+    "label":        ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],
       "release":    ["uupaa.datatype.js"]
