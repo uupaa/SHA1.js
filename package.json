@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.sha1.js",
-  "version":        "0.9.1",
+  "version":        "0.9.2",
   "description":    "SHA1 implement.",
   "url":            "https://github.com/uupaa/SHA1.js",
   "keywords":       ["SHA1", "Hash", "util", "uupaa", "WebModule", "Unstable"],
@@ -9,6 +9,7 @@
     "url":          "https://github.com/uupaa/SHA1.js.git"
   },
   "scripts": {
+    "init":         "npm update; npm run build; npm run test-page",
     "watch":        "node node_modules/uupaa.watch.js --verbose --action build",
     "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
     "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
