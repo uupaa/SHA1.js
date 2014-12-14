@@ -1,6 +1,6 @@
 {
   "name": "uupaa.sha1.js",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "SHA1 implement.",
   "url": "https://github.com/uupaa/SHA1.js",
   "keywords": [
@@ -30,6 +30,7 @@
     "hint": "jshint lib/*.js",
     "score": "node ../WebModule/run/score.js; open lint/plato/index.html",
     "patch": "node ../WebModule/run/patch.js",
+    "setup": "node ../WebModule/run/setup.js",
     "start": "cd ../; Python -m SimpleHTTPServer 8000 &",
     "stop": "killall -- Python -m SimpleHTTPServer 8000; exit 0"
   },
